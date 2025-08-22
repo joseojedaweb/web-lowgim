@@ -1,0 +1,456 @@
+/**---------- ARCHIVO FORMULARIO LOGIN---------------------- */
+main.container {
+    display: flex;
+    justify-content: center;
+    /* centrar horizontalmente */
+    align-items: center;
+    /* centrar verticalmente */
+    min-height: 100vh;
+    /* altura completa del viewport */
+    padding: 20px;
+    /* por si el contenido es más alto en móvil */
+    box-sizing: border-box;
+}
+
+.login-wrapper {
+    max-width: 500px;
+    margin: 60px auto;
+    /* Centrado horizontal + separación superior */
+    padding: 40px 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.login-wrapper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-wrapper form.login {
+    border: none;
+}
+
+.login-wrapper .form-row {
+    display: block;
+}
+
+/* Botones */
+.woocommerce button.button {
+    background-color: #7FFF00;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+
+}
+
+.woocommerce button.button:hover {
+    background-color: #6bd700;
+}
+
+.login-wrapper h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+
+/********************************************************/
+/************ DASHBOARD******************/
+/* Aplica solo en la página de cuenta WooCommerce */
+main.container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+
+.woocommerce {
+    display: flex;
+    align-items: stretch;
+    width: 100vw;
+    /* ocupa todo el ancho de la ventana */
+    min-height: calc(100vh - 80px);
+    /* ajustado al alto del header fijo si lo tienes */
+    margin: 0;
+    /*background-color: #2c8314;*/
+}
+
+.woocommerce-MyAccount-content {
+    /*background-color: rgba(219, 239, 208);*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centra el contenido hijo como .woocommerce-Addresses */
+    /*padding: 40px 20px;*/
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.woocommerce-MyAccount-navigation {
+    background-color: #2c8314;
+    position: sticky;
+    top: 80px;
+    /* igual a la altura del header */
+    height: calc(100vh - 80px);
+    /* altura total menos el header */
+    width: 250px;
+    /* o el ancho deseado */
+    overflow-y: auto;
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active a,
+.woocommerce-MyAccount-navigation ul li a:hover {
+    background-color: rgb(128, 255, 0);
+    color: #fff;
+}
+
+/*contenido del centro dashboard*/
+.dashboard-center {
+    border: 1px solid black;
+    background-color: white;
+    max-width: 900px;
+    /* más ancho (antes quizá tenías 600px) */
+    width: 100%;
+    /* ocupa el 100% hasta el max-width */
+    padding: 40px 50px;
+    /* más espacio interior */
+    margin: 0 auto;
+    /* centrado horizontal */
+    border-radius: 10px;
+    /* opcional para bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* opcional para dar profundidad */
+}
+
+.dashboard-center ul li a{
+  color: #2c8314;
+}
+
+.dashboard-center p a{
+  color: #2c8314;
+}
+
+/**---------------- EDIT-ADDRESS-----------------------*/
+/* Contenedor de ambas direcciones */
+.woocommerce-Addresses {
+    display: flex;
+    flex-direction: column; /* ← clave para apilar */
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.u-column1.col-1,
+.u-column2.col-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+
+/* Estilo visual de cada caja */
+.woocommerce-Address {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    text-align: center; /* ← CENTRA TODO el contenido interno */
+}
+
+.woocommerce-MyAccount-content > p {
+    margin-top: 30px; /* Ajusta la cantidad según lo que necesites */
+}
+
+/*---------------- FORMULARIO DIRECCION DE ENVIO Y FACTURACION---------*/
+/* Asegura que todos los campos del formulario estén uno debajo del otro */
+.woocommerce-address-fields__field-wrapper .form-row {
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas arriba de los inputs */
+.woocommerce-address-fields__field-wrapper label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs y selects ocupan el 100% del contenedor */
+.woocommerce-address-fields__field-wrapper input,
+.woocommerce-address-fields__field-wrapper select {
+    width: 100% !important;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Botón al final del formulario */
+.woocommerce-address-fields p button.button {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #7FFF00;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.woocommerce-address-fields p button.button:hover {
+    background-color: #6bd700;
+}
+
+/************MOVIL***********/
+@media (max-width: 768px) {
+    .woocommerce-MyAccount-navigation {
+        display: none;
+    }
+
+    .woocommerce {
+        flex-direction: column; /* apila el contenido */
+    }
+
+    .woocommerce-MyAccount-content {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+/***************************************************************/
+/*--- EDIT-ACCOUNT ---*/
+.woocommerce-EditAccountForm.edit-account {
+    max-width: 60%;  /* Ajusta según el ancho deseado */
+    margin: 0 auto;    /* Centra horizontalmente */
+    padding: 20px;     /* Espacio interno opcional */
+}
+
+/*****************************************************************/
+/*------- ESTILO PAGINA TARIFAS  -----------*/
+body {
+  background-color: #f0f0f0;
+}
+
+.header-section {
+  background-color: #2c8314;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #f0f0f0;
+  transform: skewX(-20deg);
+  transform-origin: top right;
+}
+
+.precios-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.card {
+  border-radius: 0;
+  border: none;
+  /*margin-top: 100px;*/
+  height: 100%;
+    display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  background-color: #333 !important;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 0 !important;
+
+}
+
+#titulo-card{
+ color: white;
+   font-weight: bold;
+   margin-bottom: 0;
+   padding: 10px;
+}
+
+.card-body {
+  padding: 20px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.current-price {
+  color: #ff8c1a;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.period {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.promo-box {
+  background-color: #7de2c9;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 0.85rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0px;
+}
+
+.feature-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  color: #ff8c1a;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.feature-text {
+  flex-grow: 1;
+}
+
+.select-btn {
+  background-color: #7030a0;
+  color: white !important;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 0px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.inscription-fee {
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.includes-text {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.plan-name {
+  font-weight: bold;
+}
+
+/****************************************************/
+/*MENSAJE INICIAR SESION SI COMPRA TARIFA SIN HABER INICIADO SESION*/
+/* Asegura que el contenedor principal permita posicionamiento */
+.woocommerce {
+    position: relative;
+}
+
+/* Posiciona el aviso WooCommerce justo encima del formulario */
+.woocommerce .woocommerce-info {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    z-index: 10;
+    margin-top: 0;
+    margin-bottom: 0;
+    pointer-events: auto;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Empuja el formulario hacia abajo para no superponerlo */
+.woocommerce .login-wrapper {
+    margin-top: 80px;
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 767px) {
+    .woocommerce .woocommerce-info {
+        top: 60px; /* Baja el aviso por debajo de la barra del navegador */
+        max-width: 90%;
+    }
+
+    .woocommerce .login-wrapper {
+        margin-top: 130px; /* Aumenta espacio para no quedar tapado */
+    }
+}
+
+/***********************************************************************************/
+/*---- FINALIZAR COMPRA ----*/
+.wp-block-woocommerce-checkout.wc-block-checkout {
+       margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1100px;
+}

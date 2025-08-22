@@ -1,0 +1,27 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+package-lock.json
+
+# Composer
+vendor/
+composer.lock
+
+# WordPress core y uploads (no incluir en este repo de tema)
+wp-admin/
+wp-includes/
+wp-content/uploads/
+wp-config.php
+.htaccess
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+*.swp
+*.map
