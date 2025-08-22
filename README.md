@@ -53,11 +53,12 @@ Tema personalizado desarrollado durante mis prácticas para un gimnasio 24/7, co
 
 ---
 
-## 📜 Licencia
-Este código se publica con fines educativos y de portfolio.  
-No se autoriza su uso comercial sin permiso del autor.
+## 🧾 License
+This project is licensed under the **[MIT License](LICENSE)**.  
+📌 A Spanish translation is also available in **[LICENSE.es.md](LICENSE.es.md)** (for reference only).
 
 ---
 
 ## ✍️ Autor
-Jose Ojeda — Desarrollador Web (DAW) especializado en WordPress y desarrollo de temas personalizados.
+Código desarrollado por **José Ojeda López** durante mi colaboración en **Multiplika**
+
